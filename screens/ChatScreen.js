@@ -54,7 +54,7 @@ const ChatScreen = ({navigation, route}) => {
             photoURL: auth.currentUser.photoURL
         })
          
-        setInput('')
+        setInput('')  
     }
 
     return (

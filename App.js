@@ -20,7 +20,7 @@ const globalScreenOptions = {
 export default function App() {
   return (
     <NavigationContainer style={styles.container}>
-      {/* Stack.Screen name 중 가장 처음으로 나타날 화면 */}
+      {/* Stack.Screen name 중 가장 처음으로 나타날 화면! */}
         <Stack.Navigator initialRouteName='Home' screenOptions={globalScreenOptions} >
           {/* component에 페이지 저장 -> button onPress할 때 navigate('name')으로 이동함 */}
           <Stack.Screen name='Login' component = {LoginScreen} />

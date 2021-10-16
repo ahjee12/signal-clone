@@ -10,11 +10,15 @@ const firebaseConfig = {
     projectId: "signal-clone-yt-build-ea4eb",
     storageBucket: "signal-clone-yt-build-ea4eb.appspot.com",
     messagingSenderId: "500561608532",
-    appId: "1:500561608532:web:e3a3a544054abfe36712c1"
+    appId: "1:500561608532:web:e3a3a544054abfe36712c1",
+  
   };
 
+ 
 let app;
+
 if(firebase.apps.length === 0){
+  // firebase.firestore().settings({ experimentalForceLongPolling: true });
   app = firebase.initializeApp(firebaseConfig)
 }else{
   app = firebase.app()

@@ -24,7 +24,7 @@ const RegisterScreen = ({navigation}) => {
                 //유저 업데이트!
                  authUser.user.updateProfile({
                      displayName: name,
-                     photoURL: imageUrl || 'https://ayogo.com/wp-content/uploads/2015/06/jp-avatar-placeholder.png'
+                     photoURL: imageUrl || '../assets/profile_hj.jpg'
                  })
             }).catch(error => {
                 alert(error.message)
@@ -47,7 +47,7 @@ const RegisterScreen = ({navigation}) => {
                     {/* <TextInput  placeholder='Full Name' autoFocus textContentType={'name'} value={name} onChangeText={text => setName(text)} />
                     <TextInput  placeholder='Email' autoFocus textContentType={'emailAddress'} value={email} onChangeText={text => setEmail(text)} />
                     <TextInput secureTextEntry={true} textContentType={'password'} placeholder='Password' autoFocus value={password} onChangeText={text => setPassword(text)} /> */}
-                    <Input placeholder='Profile Picture URL (optional)' autoFocus type='text' value={imageUrl} onChange={text => setimageUrl(text)} onSubmitEditing={register}/>
+                    <Input placeholder='Profile Picture URL (optional)' autoFocus type='text' value={imageUrl} onChangeText={text => setimageUrl(text)} onSubmitEditing={register}/>
                 </View>
                 <Button title='register' onPress={register} raised containerStyle={styles.button}/>
             {/* </ScrollView> */}

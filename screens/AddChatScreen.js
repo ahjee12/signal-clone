@@ -9,9 +9,12 @@ const AddChatScreen = ({ navigation }) => {
 
     useLayoutEffect(() =>{
         navigation.setOptions({
-            title: 'Add a new chat',
-            headerBackTitle: 'Chats',
-
+            title: 'Add a new chats',
+            headerTitleAlign: 'center',
+            // headerBackTitle: 'Chats',
+            // headerTitleStyle: [{flex: 1, justifyContent: 'center', alignSelf: 'center', textAlign: 'center', textAlignVertical:'center'}],
+            // headerTitleStyle: [{textAlign: 'center'}],
+            // headerRight:<View/>,
         })
     }, [navigation])
 
@@ -23,6 +26,7 @@ const AddChatScreen = ({ navigation }) => {
             navigation.goBack()
         }).catch(error => alert(error))
     }
+    
     return (
         <View style={styles.container}>
             {/* react native특징 - 단순onChange가 아닌 onChangeText={text => useState함수}에다가 onSubmitEditing={} */}
@@ -31,7 +35,7 @@ const AddChatScreen = ({ navigation }) => {
                 leftIcon={ <Icon name='wechat' type='antdesign' size={24} color='black' />}
                 onSubmitEditing={createChat}
             />
-            <Button onPress={createChat} title='Create new chat'> </Button>
+            <Button disabled={!input} onPress={createChat} title='Create new chat'> </Button>
         </View>
     )
 }

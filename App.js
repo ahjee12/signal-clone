@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import LoginScreen from './screens/LoginScreen'
 import { createStackNavigator } from '@react-navigation/stack'
@@ -18,6 +18,8 @@ const globalScreenOptions = {
 }
 
 export default function App() {
+// 디버거 없애기
+// LogBox.ignoreLogs(['Remote debugger'])
   return (
     <NavigationContainer style={styles.container}>
       {/* Stack.Screen name 중 가장 처음으로 나타날 화면!!!! */}
@@ -34,7 +36,6 @@ export default function App() {
         <StatusBar style="auto" />
       </View> */}
     </NavigationContainer>
-
   );
 }
 

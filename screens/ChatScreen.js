@@ -108,7 +108,7 @@ const ChatScreen = ({navigation, route}) => {
                                         <Text style = {styles.recieverText}>{data.message}</Text>
                                     </View>
                                 ) : (
-                                    <View style = {styles.sender}>
+                                    <View key={id} style = {styles.sender}>
                                         <Avatar rounded size={30} source={{uri: data.photoURL}} 
                                             position='absolute' bottom={-15} left={-5} 
                                             //web
